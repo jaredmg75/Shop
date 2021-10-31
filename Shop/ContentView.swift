@@ -14,13 +14,13 @@ struct ContentView: View {
     switch viewModel.currentState {
     case .login: LoginView(viewModel: viewModel.createLoginViewModel())
     case .app: TabView {
-      Color.red
+      ProductsView()
         .tabItem {
-            Label("Menu", systemImage: "list.dash")
+            Label("Products", systemImage: "list.dash")
         }
       Color.blue
         .tabItem {
-            Label("Order", systemImage: "square.and.pencil")
+            Label("Orders", systemImage: "shippingbox.fill")
         }
     }
     }
